@@ -4,7 +4,7 @@ import { getAllProducts,createProduct } from '../controller/productController.js
  const  router=express.Router();
 
 
-router.post('/products',createProduct)
-router.get('/products',getAllProducts)
+router.post('/product/create',createProduct)
+router.get('/product',getAllProducts)
 
   export  default router;
