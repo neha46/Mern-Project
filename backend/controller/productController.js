@@ -11,8 +11,10 @@ import Product from '../models/productModel.js';
  }
 
  //GET AL PRODUCTS
-export const getAllProducts = (req, res) => {
-    res.status(200).json({ message: "route is working" });
+export const getAllProducts = async(req, res) => {
+    const product=await Product.find()
+    res.status(200).json({success:true,
+    product });
 };
 
 
